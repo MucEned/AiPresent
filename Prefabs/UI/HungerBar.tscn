@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Prefabs/UI/HungerBar.gd" type="Script" id=1]
+
+[node name="HungerBar" type="ProgressBar"]
+margin_left = 5.55591
+margin_top = 5.55591
+margin_right = 113.556
+margin_bottom = 19.5559
+value = 50.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
