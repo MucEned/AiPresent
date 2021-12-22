@@ -1,13 +1,54 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Sprites/Player/Ai-Sheet.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/Player/Ai.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Player/Tris-effect-Raw.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0.4 ), 0.0, -0.0640591, 0, 0, Vector2( 1, 0 ), -1.02312, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.235714, 1 )
+colors = PoolColorArray( 1, 0.507813, 0.507813, 1, 1, 0.304688, 0.304688, 1, 1, 0, 0, 1 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 4, 8 )
 
-[sub_resource type="Animation" id=2]
-resource_name = "Idle"
+[sub_resource type="Animation" id=5]
+length = 0.41
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 13, 14, 15, 16 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "sweep"
+}, {
+"args": [  ],
+"method": "return_idle"
+} ]
+}
+
+[sub_resource type="Animation" id=6]
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -22,9 +63,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 1, 2, 3, 4, 5 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/Area2D/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[sub_resource type="Animation" id=3]
-resource_name = "JumpDown"
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -37,9 +89,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 12 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/Area2D/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[sub_resource type="Animation" id=4]
-resource_name = "JumpMiddle"
+[sub_resource type="Animation" id=8]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -52,8 +115,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 11 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/Area2D/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=9]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -66,8 +141,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 10 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/Area2D/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=10]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -82,8 +169,25 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 6, 7, 8, 9 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/Area2D/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 3, 7 )
 
 [node name="Ai" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource( 2 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
@@ -95,26 +199,70 @@ collision_mask = 2
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -16 )
 texture = ExtResource( 1 )
-hframes = 13
-frame = 12
+hframes = 17
+frame = 13
 
 [node name="DropPoint" type="Position2D" parent="Sprite"]
 position = Vector2( 14, 6 )
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Sprite"]
+show_behind_parent = true
+position = Vector2( 0, 9 )
+amount = 32
+lifetime = 0.5
+local_coords = false
+texture = ExtResource( 3 )
+emission_shape = 1
+emission_sphere_radius = 2.0
+gravity = Vector2( 0, -50 )
+radial_accel = 20.0
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Sprite"]
+position = Vector2( 14, 8 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D"]
+position = Vector2( -10, -2 )
+shape = SubResource( 3 )
+disabled = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -8 )
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 
 [node name="Animator" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
-anims/Idle = SubResource( 2 )
-anims/JumpDown = SubResource( 3 )
-anims/JumpMiddle = SubResource( 4 )
-anims/JumpUp = SubResource( 5 )
-anims/Move = SubResource( 6 )
+anims/Action = SubResource( 5 )
+anims/Idle = SubResource( 6 )
+anims/JumpDown = SubResource( 7 )
+anims/JumpMiddle = SubResource( 8 )
+anims/JumpUp = SubResource( 9 )
+anims/Move = SubResource( 10 )
 
 [node name="HungerCounter" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 3.0
 autostart = true
 
+[node name="RopeCheck" type="RayCast2D" parent="."]
+position = Vector2( 0, -8 )
+enabled = true
+cast_to = Vector2( 0, 10 )
+collision_mask = 32
+
+[node name="GroundCheck" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundCheck"]
+position = Vector2( 0, -8 )
+shape = SubResource( 11 )
+
+[node name="InGround" type="Timer" parent="."]
+
 [connection signal="timeout" from="HungerCounter" to="." method="_on_HungerCounter_timeout"]
+[connection signal="body_entered" from="GroundCheck" to="." method="_on_GroundCheck_body_entered"]
+[connection signal="body_exited" from="GroundCheck" to="." method="_on_GroundCheck_body_exited"]
+[connection signal="timeout" from="InGround" to="." method="_on_InGround_timeout"]

@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Dialogs/ReadexPro-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sprites/Background/BlueSky.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/UI/TransitionBox.tscn" type="PackedScene" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 10
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0.192157, 0.184314, 1 )
+bbcode_enabled = true
+bbcode_text = "
+
+
+
+
+
+
+
+
+
+[center][wave]<Lăn con mẹ nó chuột xuống để đọc>[/wave]
+Chúc mừng sinh nhật mầy-em gái của tao.
+Trò chơi này chưa thể hoàn thành được do anh mầy gà vcl, nhưng t sẽ cố gắn cập nhật khi rảnh.
+Thiệt ra trước giờ tao vẫn chưa có món quà nào thiệt sự xịn cho mầy, toàn là mầy cho tao, hão ae >:)
+Cảm ơn vì những món quà mà mầy mang lại cho tao.
+Cũng như những lời khuyên, những lần m nghe câu chuyện của tao.
+[img]./Dialogs/Photos/gift.jpg[/img]
+Tao cũng xin lỗi vì chuyện của mầy, tao không giúp gì được. Chỉ có thể là thằng anh cùi mía.
+Chúc mầy thời gian sắp tới sẽ xịn vcl. Có nhiều cái hay ho kể tao nghe.
+Gửi mầy đến từ thằng anh đẹp trai.
+(Đoạn viết này t có thể cho màu mè nhưng tao lười ok chưa, cho mầy background xanh là nể mặt lắm rồi >:)))))"
+text = "
+
+
+
+
+
+
+
+
+
+<Lăn con mẹ nó chuột xuống để đọc>
+Chúc mừng sinh nhật mầy-em gái của tao.
+Trò chơi này chưa thể hoàn thành được do anh mầy gà vcl, nhưng t sẽ cố gắn cập nhật khi rảnh.
+Thiệt ra trước giờ tao vẫn chưa có món quà nào thiệt sự xịn cho mầy, toàn là mầy cho tao, hão ae >:)
+Cảm ơn vì những món quà mà mầy mang lại cho tao.
+Cũng như những lời khuyên, những lần m nghe câu chuyện của tao.
+
+Tao cũng xin lỗi vì chuyện của mầy, tao không giúp gì được. Chỉ có thể là thằng anh cùi mía.
+Chúc mầy thời gian sắp tới sẽ xịn vcl. Có nhiều cái hay ho kể tao nghe.
+Gửi mầy đến từ thằng anh đẹp trai.
+(Đoạn viết này t có thể cho màu mè nhưng tao lười ok chưa, cho mầy background xanh là nể mặt lắm rồi >:)))))"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TransitionBox" parent="." instance=ExtResource( 3 )]

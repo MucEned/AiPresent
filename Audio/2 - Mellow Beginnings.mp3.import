@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/2 - Mellow Beginnings.mp3-248fac93232fa92f2fc7dffd49f8c507.mp3str"
+
+[deps]
+
+source_file="res://Audio/2 - Mellow Beginnings.mp3"
+dest_files=[ "res://.import/2 - Mellow Beginnings.mp3-248fac93232fa92f2fc7dffd49f8c507.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

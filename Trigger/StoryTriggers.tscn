@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Prefabs/DialogTrigger/StoryTrigger.tscn" type="PackedScene" id=1]
+
+[node name="StoryTriggers" type="Node"]
+
+[node name="StoryTrigger" parent="." instance=ExtResource( 1 )]
+position = Vector2( 9167, 183 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 9330, 181 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 9501, 179 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 9674, 185 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 9825, 178 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 9974, 179 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 10126, 184 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 14146, 179 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 14431, 177 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 14685, 177 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 14928, 175 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 15149, 177 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 15373, 179 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 15613, 179 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 17778, 131 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 18063, 129 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger17" parent="." instance=ExtResource( 1 )]
+position = Vector2( 18317, 129 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger18" parent="." instance=ExtResource( 1 )]
+position = Vector2( 18560, 127 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger19" parent="." instance=ExtResource( 1 )]
+position = Vector2( 18781, 129 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger20" parent="." instance=ExtResource( 1 )]
+position = Vector2( 19005, 131 )
+story_path = "res://Dialogs/telling1_d1.json"
+
+[node name="StoryTrigger21" parent="." instance=ExtResource( 1 )]
+position = Vector2( 19245, 131 )
+story_path = "res://Dialogs/telling1_d1.json"

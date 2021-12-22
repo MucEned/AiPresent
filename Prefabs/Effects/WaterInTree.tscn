@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+z_index = -3
+amount = 50
+lifetime = 2.0
+local_coords = false
+emission_shape = 2
+emission_rect_extents = Vector2( 8, 1 )
+gravity = Vector2( 0, 50 )

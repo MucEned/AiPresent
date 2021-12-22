@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Prefabs/UI/Dialog Box.gd" type="Script" id=1]
+[ext_resource path="res://Dialogs/ReadexPro-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 6
+font_data = ExtResource( 2 )
+
+[node name="Dialog Box" type="ColorRect"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = -54.819
+margin_right = -8.0
+margin_bottom = -7.819
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+dialog_path = "res://Dialogs/testDialog.json"
+
+[node name="Name" type="RichTextLabel" parent="."]
+margin_left = 8.0
+margin_right = 141.0
+margin_bottom = 26.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.168627, 0.105882, 0.0784314, 1 )
+text = "Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="."]
+margin_left = 8.0
+margin_top = 15.0
+margin_right = 584.0
+margin_bottom = 63.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0.168627, 0.105882, 0.0784314, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 272.0
+margin_top = 30.819
+margin_right = 304.0
+margin_bottom = 38.819
+custom_fonts/normal_font = SubResource( 3 )
+custom_colors/default_color = Color( 0.168627, 0.105882, 0.0784314, 1 )
+bbcode_enabled = true
+bbcode_text = "[wave]Space"
+text = "Space"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
